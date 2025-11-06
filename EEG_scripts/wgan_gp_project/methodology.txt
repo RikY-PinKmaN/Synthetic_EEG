@@ -1,0 +1,91 @@
+## **Methodology**
+
+This study uses a Conditional Wasserstein Generative Adversarial Network with Gradient Penalty (cWGAN-GP) to create synthetic electroencephalography (EEG) data for Brain-Computer Interface (BCI) applications. The goal is to improve the performance of classification models by augmenting small training datasets. The framework is tested on three different datasets covering two BCI paradigms: Motor Imagery (MI) and P300.
+
+### **1. Datasets and Preprocessing**
+
+Three datasets were used to test the data augmentation framework.
+
+#### **1.1. Motor Imagery Dataset I (MI-I)**
+This dataset contains two-class (left vs. right hand) motor imagery data. The training data and the validation/test data were sourced from two different `.mat` files to simulate separate sessions.
+*   **Preprocessing:**
+    *   **Channel Selection:** 12 EEG channels over the sensorimotor cortex were used.
+    *   **Filtering:** An elliptical bandpass filter was applied between 8 and 35 Hz.
+    *   **Epoching:** Data was epoched into 2-second trials (500 samples at 250 Hz).
+    *   **Normalization:** Trial data was scaled to a [-1, 1] range based on the min/max values of the training set.
+
+#### **1.2. Motor Imagery Dataset II (MI-II)**
+This dataset contains two-class MI data from 52 participants, processed on a per-subject basis.
+*   **Preprocessing:**
+    *   **Channel Selection:** 13 channels over the sensorimotor areas were used.
+    *   **Filtering:** A 4th-order Butterworth bandpass filter was applied between 8 and 30 Hz.
+    *   **Epoching:** Trials were trimmed by 0.5 seconds from both ends to remove potential artifacts. The sampling rate was 512 Hz.
+    *   **Normalization:** Data was scaled to [-1, 1] based on the training set's min/max values.
+
+#### **1.3. P300 Visual Speller Dataset (P300-I)**
+This dataset contains P300 responses from a visual speller task. To increase trial counts, data from pairs of subjects were combined. The task is to identify "Target" (rare) vs. "Non-Target" (frequent) stimuli.
+*   **Preprocessing:**
+    *   **Channel Selection:** 8 standard EEG channels were used (`Fz`, `Cz`, `Pz`, `C3`, `C4`, `P3`, `P4`, `Oz`).
+    *   **Filtering:** The data was filtered with a 0.4-30 Hz Butterworth bandpass filter. A variable IIR notch filter (at ~4-6 Hz and its harmonic) was also applied to remove low-frequency noise.
+    *   **Resampling:** The data was downsampled to 80 Hz.
+    *   **Epoching:** Trials were epoched from -0.1s to 0.6s relative to stimulus onset.
+    *   **Baseline Correction:** The mean of the pre-stimulus interval (-0.1s to 0.0s) was subtracted from each trial.
+    *   **Artifact Rejection:** Trials with a peak-to-peak amplitude over 50 µV on any channel were removed.
+    *   **Normalization:** Data was scaled to [-1, 1] based on the training set's min/max values.
+
+### **2. Experimental Design and Classification**
+
+A subject-specific protocol was used to evaluate the data augmentation.
+
+#### **2.1. Data Splitting**
+For each subject, data was split sequentially (non-randomly) into three sets:
+1.  **Training Set:** A small set of real trials for training the GAN.
+2.  **Validation Set:** A separate set of real trials for selecting the best synthetic data and augmentation strategy.
+3.  **Test Set:** A held-out set of real trials used only for final performance evaluation.
+
+The trial counts for each split were:
+*   **MI-I:** 40 training trials and 10 validation trials per class.
+*   **MI-II:** 40 training trials and 10 validation trials per class.
+*   **P300-I:** For training, 60 Target trials and either 120 or 240 Non-Target trials (1:2 or 1:4 ratio). For validation, 15 Target trials and either 30 or 60 Non-Target trials.
+
+#### **2.2. Classification Models**
+*   **Common Spatial Patterns with SVM (CSP-SVM) for Motor Imagery:** For MI datasets, the CSP algorithm was used to create spatial filters. The log-variances of the 6 most discriminative filtered components were used as features to train a linear Support Vector Machine (SVM).
+
+*   **Stepwise Linear Discriminant Analysis (SWLDA) for P300:** For the P300 dataset, groups of 15 single trials were first averaged to improve signal quality. Then, a Sequential Feature Selector was used to find the 5 most discriminative spatio-temporal features. A final Linear Discriminant Analysis (LDA) classifier was trained on these 5 features.
+
+### **3. Synthetic Data Generation: cWGAN-GP Framework**
+
+A Conditional Wasserstein GAN with Gradient Penalty (cWGAN-GP) was used to generate synthetic EEG trials.
+
+#### **3.1. Network Architecture**
+*   **Generator:** A convolutional network that takes a 100-dimensional latent vector and a class label (e.g., "left hand" or "Target") as input. It uses transposed convolutions to upsample the input into a full EEG trial, scaled to [-1, 1].
+*   **Critic (Discriminator):** A convolutional network that takes an EEG trial and its class label as input. It outputs a single score indicating how "real" it considers the trial to be for that given class.
+
+#### **3.2. Training Objective**
+The network was trained with the Wasserstein GAN objective, plus additional loss terms.
+1.  **Wasserstein Loss with Gradient Penalty (WGAN-GP):** The core of the training objective. It provides a stable training dynamic by optimizing the Earth Mover's distance between the real and generated data distributions.
+2.  **Frequency Domain Loss:** An additional loss, calculated as the Mean Squared Error (MSE) between the FFT magnitudes of real and generated trials, was added to the generator's objective to better preserve the spectral properties of the EEG.
+3.  **P300-Specific Loss:** For the P300 dataset only, a Mean Absolute Error (MAE) loss was calculated on the time-domain data within the expected P300 window (0.15s to 0.5s). This encouraged the generator to create more realistic P300 ERP waveforms.
+
+### **4. Augmentation and Evaluation Protocol**
+
+A multi-step protocol was used to ensure an unbiased evaluation.
+
+1.  **GAN Training:** The cWGAN-GP was trained exclusively on the real **Training Set**.
+
+2.  **Unbiased Synthetic Batch Selection:** To find the best synthetic data, multiple GANs were trained. Each trained generator produced numerous batches of synthetic data. A selection score was calculated for each batch without using the test set.
+    *   **For MI datasets:** A CSP-SVM classifier was trained on a synthetic batch, and its classification accuracy on the real **Validation Set** was used as the selection score.
+    *   **For the P300 dataset:** The selection score was based on ERP similarity, calculated as the Mean Absolute Error between the grand-average ERP of the synthetic batch and the grand-average ERP of the real **Validation Set**. A lower error meant a better score.
+    *   The top 10 batches with the best scores were kept for the next step.
+
+3.  **Best Strategy Selection:** For each of the top 10 synthetic batches, different augmentation strategies were tested:
+    *   **Synthetic-Only:** Training a classifier on only the synthetic data.
+    *   **Augmented:** Training a classifier on the real **Training Set** augmented with a portion of the synthetic data (at 25%, 50%, and 100% mixing ratios).
+    *   Each of these strategies was evaluated on the real **Validation Set**. The strategy (i.e., the specific synthetic batch and mixing ratio) that yielded the highest validation accuracy was designated the `Best_Strategy`.
+
+4.  **Final Performance Comparison:** The performance of the `Best_Strategy` was then measured on the unseen **Test Set**. For a fair comparison, the final models were trained on the combined real **Training + Validation** sets (or an augmented version thereof) and evaluated on the **Test Set**. The final results were compared across three conditions:
+    *   **Baseline:** A model trained on the real **Training + Validation** sets.
+    *   **Best Synthetic-Only:** A model trained on the best-performing synthetic-only batch (as determined during strategy selection).
+    *   **Best Augmented:** A model trained on the real **Training + Validation** sets, augmented with synthetic data according to the `Best_Strategy`.
+
+5.  **Qualitative Analysis:** The quality of the generated data was also checked by visually comparing the Grand Average ERPs and Power Spectral Density (PSD) plots of the real and synthetic datasets.

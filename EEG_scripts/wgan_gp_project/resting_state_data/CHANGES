@@ -1,0 +1,18 @@
+1.0.8 2025-04-27
+  - sub-01\ses-1\eeg\sub-01_ses-1_task-eyesopen_eeg.fdt was updated and all json files of the electrodes were added
+1.0.7 2025-02-05
+  - sub-06\ses-1\eeg\sub-06_ses-1_task-eyesopen_eeg.fdt and set were updated
+1.0.6 2025-01-01
+  - sub-04\ses-1\eeg\sub-04_ses-1_task-eyesopen_eeg.fdt and set files were updated
+1.0.5 2024-05-08
+  - the doi of the article was added
+1.0.4 2024-03-31
+  - the readme file was updated
+1.0.3 2024-03-29
+  - participants.tsv and participants.json were updated
+1.0.2 2024-03-06
+  - some files were added
+1.0.1 2024-03-06
+  - some files were added
+1.0.0 2023-12-20
+  - 2023/12/20 the empty files was added

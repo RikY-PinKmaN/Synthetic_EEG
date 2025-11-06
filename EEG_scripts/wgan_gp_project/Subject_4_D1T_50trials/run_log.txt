@@ -1,0 +1,157 @@
+Log for Subject 4 (0-indexed: 3)
+Output directory: Subject_4_D1T_50trials
+Global seed: 42
+Selected channels (0-based): [2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 14, 16]
+Train trials/class: 40, Valid trials/class: 10, GAN Runs: 1
+======================================================================
+
+PROCESSING SUBJECT 4/9 (Selected index 3)
+
+--- Step 1: Data Preprocessing & Splitting ---
+  Preprocessing TRAINING data for S4 from data2.mat...
+  S4 (Train): GAN data shape (80, 12, 500), CSP data shape (500, 12, 80)
+Saved complete training set to Subject_4_D1T_50trials/training_4.mat
+  Preprocessing VALIDATION/TEST data for S4 from data1.mat...
+  S4 (Validation): Final CSP data shape (500, 12, 20)
+  S4 (Test): Final CSP data shape (500, 12, 124)
+
+--- Step 2: Baseline Evaluation ---
+Baseline Accuracy (Train+Valid -> Test): 61.29%
+
+--- Step 3: 1 cGAN RUNS & BATCH SELECTION ---
+
+--- Training MI_cGAN for S4, Run 1 ---
+Generator input spec: [InputSpec(shape=(None, 100), ndim=2), InputSpec(shape=(None, 1), ndim=2)], output shape: (None, 12, 500)
+Critic input spec: [InputSpec(shape=(None, 12, 500), ndim=3), InputSpec(shape=(None, 1), ndim=2)], output shape: (None, 1)
+Epoch 0/1 (MI_cGAN, S4, Run 1): D Loss = 90.6690, G Loss (Comb) = 2.9139
+  --- Generating & Evaluating Batches with Validation Accuracy (Run 1) ---
+    Run 1, Batch 1: Validation Accuracy: 50.0000
+    Run 1, Batch 2: Validation Accuracy: 50.0000
+    Run 1, Batch 3: Validation Accuracy: 50.0000
+    Run 1, Batch 4: Validation Accuracy: 50.0000
+    Run 1, Batch 5: Validation Accuracy: 50.0000
+    Run 1, Batch 6: Validation Accuracy: 50.0000
+    Run 1, Batch 7: Validation Accuracy: 50.0000
+    Run 1, Batch 8: Validation Accuracy: 50.0000
+    Run 1, Batch 9: Validation Accuracy: 50.0000
+    Run 1, Batch 10: Validation Accuracy: 50.0000
+    Run 1, Batch 11: Validation Accuracy: 50.0000
+    Run 1, Batch 12: Validation Accuracy: 40.0000
+    Run 1, Batch 13: Validation Accuracy: 50.0000
+    Run 1, Batch 14: Validation Accuracy: 50.0000
+    Run 1, Batch 15: Validation Accuracy: 50.0000
+    Run 1, Batch 16: Validation Accuracy: 65.0000
+    Run 1, Batch 17: Validation Accuracy: 50.0000
+    Run 1, Batch 18: Validation Accuracy: 50.0000
+    Run 1, Batch 19: Validation Accuracy: 50.0000
+    Run 1, Batch 20: Validation Accuracy: 50.0000
+    Run 1, Batch 21: Validation Accuracy: 50.0000
+    Run 1, Batch 22: Validation Accuracy: 50.0000
+    Run 1, Batch 23: Validation Accuracy: 50.0000
+    Run 1, Batch 24: Validation Accuracy: 60.0000
+    Run 1, Batch 25: Validation Accuracy: 50.0000
+    Run 1, Batch 26: Validation Accuracy: 50.0000
+    Run 1, Batch 27: Validation Accuracy: 50.0000
+    Run 1, Batch 28: Validation Accuracy: 50.0000
+    Run 1, Batch 29: Validation Accuracy: 50.0000
+    Run 1, Batch 30: Validation Accuracy: 50.0000
+
+
+--- Step 4: Selecting Best Augmentation Strategy ---
+Selected top 10 batches based on GA similarity.
+
+--- Evaluating strategies on the validation set ---
+    Run 1, Batch 16, Strategy 'Synth Only': Validation Acc: 65.00%
+    Run 1, Batch 16, Strategy 'Augmented (25%)': Validation Acc: 75.00%
+    Run 1, Batch 16, Strategy 'Augmented (50%)': Validation Acc: 75.00%
+    Run 1, Batch 16, Strategy 'Augmented (100%)': Validation Acc: 75.00%
+    Run 1, Batch 24, Strategy 'Synth Only': Validation Acc: 60.00%
+    Run 1, Batch 24, Strategy 'Augmented (25%)': Validation Acc: 75.00%
+    Run 1, Batch 24, Strategy 'Augmented (50%)': Validation Acc: 75.00%
+    Run 1, Batch 24, Strategy 'Augmented (100%)': Validation Acc: 75.00%
+    Run 1, Batch 1, Strategy 'Synth Only': Validation Acc: 50.00%
+    Run 1, Batch 1, Strategy 'Augmented (25%)': Validation Acc: 75.00%
+    Run 1, Batch 1, Strategy 'Augmented (50%)': Validation Acc: 75.00%
+    Run 1, Batch 1, Strategy 'Augmented (100%)': Validation Acc: 75.00%
+    Run 1, Batch 2, Strategy 'Synth Only': Validation Acc: 50.00%
+    Run 1, Batch 2, Strategy 'Augmented (25%)': Validation Acc: 75.00%
+    Run 1, Batch 2, Strategy 'Augmented (50%)': Validation Acc: 75.00%
+    Run 1, Batch 2, Strategy 'Augmented (100%)': Validation Acc: 75.00%
+    Run 1, Batch 3, Strategy 'Synth Only': Validation Acc: 50.00%
+    Run 1, Batch 3, Strategy 'Augmented (25%)': Validation Acc: 75.00%
+    Run 1, Batch 3, Strategy 'Augmented (50%)': Validation Acc: 75.00%
+    Run 1, Batch 3, Strategy 'Augmented (100%)': Validation Acc: 75.00%
+    Run 1, Batch 4, Strategy 'Synth Only': Validation Acc: 50.00%
+    Run 1, Batch 4, Strategy 'Augmented (25%)': Validation Acc: 70.00%
+    Run 1, Batch 4, Strategy 'Augmented (50%)': Validation Acc: 70.00%
+    Run 1, Batch 4, Strategy 'Augmented (100%)': Validation Acc: 70.00%
+    Run 1, Batch 5, Strategy 'Synth Only': Validation Acc: 50.00%
+    Run 1, Batch 5, Strategy 'Augmented (25%)': Validation Acc: 70.00%
+    Run 1, Batch 5, Strategy 'Augmented (50%)': Validation Acc: 70.00%
+    Run 1, Batch 5, Strategy 'Augmented (100%)': Validation Acc: 70.00%
+    Run 1, Batch 6, Strategy 'Synth Only': Validation Acc: 50.00%
+    Run 1, Batch 6, Strategy 'Augmented (25%)': Validation Acc: 70.00%
+    Run 1, Batch 6, Strategy 'Augmented (50%)': Validation Acc: 70.00%
+    Run 1, Batch 6, Strategy 'Augmented (100%)': Validation Acc: 70.00%
+    Run 1, Batch 7, Strategy 'Synth Only': Validation Acc: 50.00%
+    Run 1, Batch 7, Strategy 'Augmented (25%)': Validation Acc: 75.00%
+    Run 1, Batch 7, Strategy 'Augmented (50%)': Validation Acc: 75.00%
+    Run 1, Batch 7, Strategy 'Augmented (100%)': Validation Acc: 75.00%
+    Run 1, Batch 8, Strategy 'Synth Only': Validation Acc: 50.00%
+    Run 1, Batch 8, Strategy 'Augmented (25%)': Validation Acc: 70.00%
+    Run 1, Batch 8, Strategy 'Augmented (50%)': Validation Acc: 70.00%
+    Run 1, Batch 8, Strategy 'Augmented (100%)': Validation Acc: 70.00%
+
+Found 18 strategies with top validation accuracy of 75.00%. Using GA score as tie-breaker.
+
+Selected best strategy: Augmented (25%) from Run 1, Batch 16 (Val Acc: 75.00%, GA Score: 65.0000)
+Saved final selected synthetic batch to Subject_4_D1T_50trials/synthetic_4.mat
+
+--- Plotting GA Comparison for Sel.ChIdx 0 (OrigCh 3) (S4) ---
+  GA Stats (Real vs Synth) Cls 1: Corr: -0.0268, RMSE: 0.0334
+  Freq W-dist (Real vs Synth): 0.2421
+  GA Stats (Real vs Aug) Cls 1: Corr: 0.9967, RMSE: 0.0067
+  Freq W-dist (Real vs Aug): 0.0607
+  GA Stats (Real vs Synth) Cls 2: Corr: -0.1433, RMSE: 0.0319
+  Freq W-dist (Real vs Synth): 0.2037
+  GA Stats (Real vs Aug) Cls 2: Corr: 0.9959, RMSE: 0.0064
+  Freq W-dist (Real vs Aug): 0.0596
+
+--- PSD ANALYSIS for Sel.ChIdx 0 (OrigCh 3) (S4) ---
+
+--- Plotting GA Comparison for Sel.ChIdx 5 (OrigCh 9) (S4) ---
+  GA Stats (Real vs Synth) Cls 1: Corr: 0.0208, RMSE: 0.0410
+  Freq W-dist (Real vs Synth): 0.2527
+  GA Stats (Real vs Aug) Cls 1: Corr: 0.9957, RMSE: 0.0082
+  Freq W-dist (Real vs Aug): 0.0651
+  GA Stats (Real vs Synth) Cls 2: Corr: -0.0563, RMSE: 0.0401
+  Freq W-dist (Real vs Synth): 0.2115
+  GA Stats (Real vs Aug) Cls 2: Corr: 0.9947, RMSE: 0.0080
+  Freq W-dist (Real vs Aug): 0.0666
+
+--- PSD ANALYSIS for Sel.ChIdx 5 (OrigCh 9) (S4) ---
+
+--- Plotting GA Comparison for Sel.ChIdx 11 (OrigCh 17) (S4) ---
+  GA Stats (Real vs Synth) Cls 1: Corr: -0.0381, RMSE: 0.0402
+  Freq W-dist (Real vs Synth): 0.2621
+  GA Stats (Real vs Aug) Cls 1: Corr: 0.9969, RMSE: 0.0080
+  Freq W-dist (Real vs Aug): 0.0690
+  GA Stats (Real vs Synth) Cls 2: Corr: 0.0141, RMSE: 0.0396
+  Freq W-dist (Real vs Synth): 0.2627
+  GA Stats (Real vs Aug) Cls 2: Corr: 0.9970, RMSE: 0.0079
+  Freq W-dist (Real vs Aug): 0.0701
+
+--- PSD ANALYSIS for Sel.ChIdx 11 (OrigCh 17) (S4) ---
+
+
+--- Step 5: Final Evaluation on Test Set ---
+BEST SYNTHETIC-ONLY (Val Acc: 65.00%) -> REAL test accuracy: 57.26%
+Retraining best model on combined Train+Validation data for final evaluation.
+BEST OVERALL STRATEGY (Augmented (25%)) -> REAL test accuracy: 63.71%
+
+
+=== FINAL SUMMARY FOR S4 ===
+Baseline Accuracy (Train+Valid -> Test): 61.29%
+Best Synthetic-Only Accuracy (Synth Train -> Test): 57.26%
+Best Augmented Strategy (Augmented (25%)) Accuracy (Augmented Train+Valid -> Test): 63.71%
+Saved final accuracy plot to Subject_4_D1T_50trials/final_accuracies_S4.png

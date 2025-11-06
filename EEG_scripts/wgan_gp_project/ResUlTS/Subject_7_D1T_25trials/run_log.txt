@@ -1,0 +1,379 @@
+Log for Subject 7 (0-indexed: 6)
+Output directory: Subject_7_D1T_25trials
+Global seed: 42
+Selected channels (0-based): [2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 14, 16]
+Train trials/class: 20, Valid trials/class: 5, GAN Runs: 5
+======================================================================================
+
+PROCESSING SUBJECT 7/9 (Selected index 6)
+
+--- PREPROCESSING DATA FOR S7 ---
+  Preprocessing TRAINING data for S7 from data2.mat...
+  S7 (Train): GAN data shape (40, 12, 500), CSP data shape (500, 12, 40)
+  Preprocessing VALIDATION/TEST data for S7 from data1.mat...
+  S7 (Validation): Final CSP data shape (500, 12, 10)
+  S7 (Test): Final CSP data shape (500, 12, 134)
+
+--- Combining Training and Validation Sets for Evaluation ---
+  Combined training and validation data. New shape: (500, 12, 50)
+Shape of training data for cGAN (S7): (40, 12, 500)
+Shape of training labels for cGAN (S7): (40,)
+
+
+--- BASELINE (S7): REAL_train -> REAL_test ---
+  S7 Test Acc (REAL_train -> REAL_test): 73.88%
+  S7 CM (REAL_train -> REAL_test):
+[[52 15]
+ [20 47]]
+
+--- STARTING 5 cGAN RUNS FOR S7 ---
+
+
+=== cGAN RUN 1/5 for S7 ===
+
+--- Training MI_cGAN for S7, Run 1 ---
+Generator input spec: [InputSpec(shape=(None, 100), ndim=2), InputSpec(shape=(None, 1), ndim=2)], output shape: (None, 12, 500)
+Critic input spec: [InputSpec(shape=(None, 12, 500), ndim=3), InputSpec(shape=(None, 1), ndim=2)], output shape: (None, 1)
+Epoch 0/1000 (MI_cGAN, S7, Run 1): D Loss = 102.7690, G Loss (Comb) = 3.5577
+Epoch 100/1000 (MI_cGAN, S7, Run 1): D Loss = -7.7080, G Loss (Comb) = -33.7870
+Epoch 200/1000 (MI_cGAN, S7, Run 1): D Loss = -3.9433, G Loss (Comb) = -11.1649
+Epoch 300/1000 (MI_cGAN, S7, Run 1): D Loss = -3.4733, G Loss (Comb) = -2.4320
+Epoch 400/1000 (MI_cGAN, S7, Run 1): D Loss = -4.8343, G Loss (Comb) = -1.6778
+Epoch 500/1000 (MI_cGAN, S7, Run 1): D Loss = -5.5140, G Loss (Comb) = -1.1004
+Epoch 600/1000 (MI_cGAN, S7, Run 1): D Loss = -6.4336, G Loss (Comb) = 1.3636
+Epoch 700/1000 (MI_cGAN, S7, Run 1): D Loss = -7.3992, G Loss (Comb) = 3.8336
+Epoch 800/1000 (MI_cGAN, S7, Run 1): D Loss = -7.3375, G Loss (Comb) = 6.1503
+Epoch 900/1000 (MI_cGAN, S7, Run 1): D Loss = -7.3461, G Loss (Comb) = 7.0371
+Epoch 999/1000 (MI_cGAN, S7, Run 1): D Loss = -7.9148, G Loss (Comb) = 7.1367
+
+--- BATCH GENERATION & 'SYNTH-ONLY' EVALUATION (S7, Run 1) ---
+  Generating 30 synth batches for 'synth-only' evaluation.
+  Selection is based on model performance on the combined train+validation dataset.
+    Run 1, Batch 1, Strategy 'Synth Only': Selection Acc: 44.00%
+    Run 1, Batch 2, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 1, Batch 3, Strategy 'Synth Only': Selection Acc: 52.00%
+    Run 1, Batch 4, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 1, Batch 5, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 1, Batch 6, Strategy 'Synth Only': Selection Acc: 38.00%
+    Run 1, Batch 7, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 1, Batch 8, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 1, Batch 9, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 1, Batch 10, Strategy 'Synth Only': Selection Acc: 52.00%
+    Run 1, Batch 11, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 1, Batch 12, Strategy 'Synth Only': Selection Acc: 54.00%
+    Run 1, Batch 13, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 1, Batch 14, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 1, Batch 15, Strategy 'Synth Only': Selection Acc: 58.00%
+    Run 1, Batch 16, Strategy 'Synth Only': Selection Acc: 42.00%
+    Run 1, Batch 17, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 1, Batch 18, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 1, Batch 19, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 1, Batch 20, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 1, Batch 21, Strategy 'Synth Only': Selection Acc: 58.00%
+    Run 1, Batch 22, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 1, Batch 23, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 1, Batch 24, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 1, Batch 25, Strategy 'Synth Only': Selection Acc: 54.00%
+    Run 1, Batch 26, Strategy 'Synth Only': Selection Acc: 52.00%
+    Run 1, Batch 27, Strategy 'Synth Only': Selection Acc: 56.00%
+    Run 1, Batch 28, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 1, Batch 29, Strategy 'Synth Only': Selection Acc: 60.00%
+    Run 1, Batch 30, Strategy 'Synth Only': Selection Acc: 50.00%
+
+
+=== cGAN RUN 2/5 for S7 ===
+
+--- Training MI_cGAN for S7, Run 2 ---
+Generator input spec: [InputSpec(shape=(None, 100), ndim=2), InputSpec(shape=(None, 1), ndim=2)], output shape: (None, 12, 500)
+Critic input spec: [InputSpec(shape=(None, 12, 500), ndim=3), InputSpec(shape=(None, 1), ndim=2)], output shape: (None, 1)
+Epoch 0/1000 (MI_cGAN, S7, Run 2): D Loss = 85.5649, G Loss (Comb) = 4.8933
+Epoch 100/1000 (MI_cGAN, S7, Run 2): D Loss = -7.5301, G Loss (Comb) = -39.3747
+Epoch 200/1000 (MI_cGAN, S7, Run 2): D Loss = -4.1402, G Loss (Comb) = -11.8124
+Epoch 300/1000 (MI_cGAN, S7, Run 2): D Loss = -2.1362, G Loss (Comb) = -6.4705
+Epoch 400/1000 (MI_cGAN, S7, Run 2): D Loss = -3.6631, G Loss (Comb) = -0.9018
+Epoch 500/1000 (MI_cGAN, S7, Run 2): D Loss = -4.7245, G Loss (Comb) = 3.3420
+Epoch 600/1000 (MI_cGAN, S7, Run 2): D Loss = -5.1601, G Loss (Comb) = 5.7938
+Epoch 700/1000 (MI_cGAN, S7, Run 2): D Loss = -4.7302, G Loss (Comb) = 5.9024
+Epoch 800/1000 (MI_cGAN, S7, Run 2): D Loss = -5.7494, G Loss (Comb) = 8.2138
+Epoch 900/1000 (MI_cGAN, S7, Run 2): D Loss = -6.5401, G Loss (Comb) = 9.4494
+Epoch 999/1000 (MI_cGAN, S7, Run 2): D Loss = -6.9298, G Loss (Comb) = 8.9867
+
+--- BATCH GENERATION & 'SYNTH-ONLY' EVALUATION (S7, Run 2) ---
+  Generating 30 synth batches for 'synth-only' evaluation.
+  Selection is based on model performance on the combined train+validation dataset.
+    Run 2, Batch 1, Strategy 'Synth Only': Selection Acc: 44.00%
+    Run 2, Batch 2, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 2, Batch 3, Strategy 'Synth Only': Selection Acc: 52.00%
+    Run 2, Batch 4, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 2, Batch 5, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 2, Batch 6, Strategy 'Synth Only': Selection Acc: 58.00%
+    Run 2, Batch 7, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 2, Batch 8, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 2, Batch 9, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 2, Batch 10, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 2, Batch 11, Strategy 'Synth Only': Selection Acc: 54.00%
+    Run 2, Batch 12, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 2, Batch 13, Strategy 'Synth Only': Selection Acc: 46.00%
+    Run 2, Batch 14, Strategy 'Synth Only': Selection Acc: 62.00%
+    Run 2, Batch 15, Strategy 'Synth Only': Selection Acc: 54.00%
+    Run 2, Batch 16, Strategy 'Synth Only': Selection Acc: 52.00%
+    Run 2, Batch 17, Strategy 'Synth Only': Selection Acc: 62.00%
+    Run 2, Batch 18, Strategy 'Synth Only': Selection Acc: 44.00%
+    Run 2, Batch 19, Strategy 'Synth Only': Selection Acc: 54.00%
+    Run 2, Batch 20, Strategy 'Synth Only': Selection Acc: 46.00%
+    Run 2, Batch 21, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 2, Batch 22, Strategy 'Synth Only': Selection Acc: 46.00%
+    Run 2, Batch 23, Strategy 'Synth Only': Selection Acc: 38.00%
+    Run 2, Batch 24, Strategy 'Synth Only': Selection Acc: 44.00%
+    Run 2, Batch 25, Strategy 'Synth Only': Selection Acc: 54.00%
+    Run 2, Batch 26, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 2, Batch 27, Strategy 'Synth Only': Selection Acc: 54.00%
+    Run 2, Batch 28, Strategy 'Synth Only': Selection Acc: 42.00%
+    Run 2, Batch 29, Strategy 'Synth Only': Selection Acc: 62.00%
+    Run 2, Batch 30, Strategy 'Synth Only': Selection Acc: 52.00%
+
+
+=== cGAN RUN 3/5 for S7 ===
+
+--- Training MI_cGAN for S7, Run 3 ---
+Generator input spec: [InputSpec(shape=(None, 100), ndim=2), InputSpec(shape=(None, 1), ndim=2)], output shape: (None, 12, 500)
+Critic input spec: [InputSpec(shape=(None, 12, 500), ndim=3), InputSpec(shape=(None, 1), ndim=2)], output shape: (None, 1)
+Epoch 0/1000 (MI_cGAN, S7, Run 3): D Loss = 91.9485, G Loss (Comb) = 3.3846
+Epoch 100/1000 (MI_cGAN, S7, Run 3): D Loss = -8.2164, G Loss (Comb) = -41.8976
+Epoch 200/1000 (MI_cGAN, S7, Run 3): D Loss = -3.8581, G Loss (Comb) = -12.2067
+Epoch 300/1000 (MI_cGAN, S7, Run 3): D Loss = -5.6870, G Loss (Comb) = -9.6167
+Epoch 400/1000 (MI_cGAN, S7, Run 3): D Loss = -5.8337, G Loss (Comb) = 0.1667
+Epoch 500/1000 (MI_cGAN, S7, Run 3): D Loss = -6.9061, G Loss (Comb) = 2.1992
+Epoch 600/1000 (MI_cGAN, S7, Run 3): D Loss = -7.3913, G Loss (Comb) = 3.0777
+Epoch 700/1000 (MI_cGAN, S7, Run 3): D Loss = -7.4921, G Loss (Comb) = 4.9597
+Epoch 800/1000 (MI_cGAN, S7, Run 3): D Loss = -7.7199, G Loss (Comb) = 8.0345
+Epoch 900/1000 (MI_cGAN, S7, Run 3): D Loss = -8.0259, G Loss (Comb) = 9.7951
+Epoch 999/1000 (MI_cGAN, S7, Run 3): D Loss = -8.6628, G Loss (Comb) = 8.8207
+
+--- BATCH GENERATION & 'SYNTH-ONLY' EVALUATION (S7, Run 3) ---
+  Generating 30 synth batches for 'synth-only' evaluation.
+  Selection is based on model performance on the combined train+validation dataset.
+    Run 3, Batch 1, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 3, Batch 2, Strategy 'Synth Only': Selection Acc: 40.00%
+    Run 3, Batch 3, Strategy 'Synth Only': Selection Acc: 52.00%
+    Run 3, Batch 4, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 3, Batch 5, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 3, Batch 6, Strategy 'Synth Only': Selection Acc: 46.00%
+    Run 3, Batch 7, Strategy 'Synth Only': Selection Acc: 38.00%
+    Run 3, Batch 8, Strategy 'Synth Only': Selection Acc: 54.00%
+    Run 3, Batch 9, Strategy 'Synth Only': Selection Acc: 52.00%
+    Run 3, Batch 10, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 3, Batch 11, Strategy 'Synth Only': Selection Acc: 60.00%
+    Run 3, Batch 12, Strategy 'Synth Only': Selection Acc: 46.00%
+    Run 3, Batch 13, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 3, Batch 14, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 3, Batch 15, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 3, Batch 16, Strategy 'Synth Only': Selection Acc: 56.00%
+    Run 3, Batch 17, Strategy 'Synth Only': Selection Acc: 46.00%
+    Run 3, Batch 18, Strategy 'Synth Only': Selection Acc: 36.00%
+    Run 3, Batch 19, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 3, Batch 20, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 3, Batch 21, Strategy 'Synth Only': Selection Acc: 54.00%
+    Run 3, Batch 22, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 3, Batch 23, Strategy 'Synth Only': Selection Acc: 54.00%
+    Run 3, Batch 24, Strategy 'Synth Only': Selection Acc: 46.00%
+    Run 3, Batch 25, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 3, Batch 26, Strategy 'Synth Only': Selection Acc: 44.00%
+    Run 3, Batch 27, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 3, Batch 28, Strategy 'Synth Only': Selection Acc: 56.00%
+    Run 3, Batch 29, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 3, Batch 30, Strategy 'Synth Only': Selection Acc: 50.00%
+
+
+=== cGAN RUN 4/5 for S7 ===
+
+--- Training MI_cGAN for S7, Run 4 ---
+Generator input spec: [InputSpec(shape=(None, 100), ndim=2), InputSpec(shape=(None, 1), ndim=2)], output shape: (None, 12, 500)
+Critic input spec: [InputSpec(shape=(None, 12, 500), ndim=3), InputSpec(shape=(None, 1), ndim=2)], output shape: (None, 1)
+Epoch 0/1000 (MI_cGAN, S7, Run 4): D Loss = 122.8291, G Loss (Comb) = 2.5985
+Epoch 100/1000 (MI_cGAN, S7, Run 4): D Loss = -7.6675, G Loss (Comb) = -33.8815
+Epoch 200/1000 (MI_cGAN, S7, Run 4): D Loss = -3.8867, G Loss (Comb) = -12.6903
+Epoch 300/1000 (MI_cGAN, S7, Run 4): D Loss = -2.2722, G Loss (Comb) = -5.6744
+Epoch 400/1000 (MI_cGAN, S7, Run 4): D Loss = -3.7582, G Loss (Comb) = -3.1741
+Epoch 500/1000 (MI_cGAN, S7, Run 4): D Loss = -4.8109, G Loss (Comb) = -1.8703
+Epoch 600/1000 (MI_cGAN, S7, Run 4): D Loss = -5.5867, G Loss (Comb) = -0.2712
+Epoch 700/1000 (MI_cGAN, S7, Run 4): D Loss = -6.1648, G Loss (Comb) = 1.1996
+Epoch 800/1000 (MI_cGAN, S7, Run 4): D Loss = -6.9282, G Loss (Comb) = 4.0043
+Epoch 900/1000 (MI_cGAN, S7, Run 4): D Loss = -7.5938, G Loss (Comb) = 5.5555
+Epoch 999/1000 (MI_cGAN, S7, Run 4): D Loss = -7.7560, G Loss (Comb) = 6.7844
+
+--- BATCH GENERATION & 'SYNTH-ONLY' EVALUATION (S7, Run 4) ---
+  Generating 30 synth batches for 'synth-only' evaluation.
+  Selection is based on model performance on the combined train+validation dataset.
+    Run 4, Batch 1, Strategy 'Synth Only': Selection Acc: 56.00%
+    Run 4, Batch 2, Strategy 'Synth Only': Selection Acc: 54.00%
+    Run 4, Batch 3, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 4, Batch 4, Strategy 'Synth Only': Selection Acc: 44.00%
+    Run 4, Batch 5, Strategy 'Synth Only': Selection Acc: 42.00%
+    Run 4, Batch 6, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 4, Batch 7, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 4, Batch 8, Strategy 'Synth Only': Selection Acc: 60.00%
+    Run 4, Batch 9, Strategy 'Synth Only': Selection Acc: 46.00%
+    Run 4, Batch 10, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 4, Batch 11, Strategy 'Synth Only': Selection Acc: 46.00%
+    Run 4, Batch 12, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 4, Batch 13, Strategy 'Synth Only': Selection Acc: 40.00%
+    Run 4, Batch 14, Strategy 'Synth Only': Selection Acc: 44.00%
+    Run 4, Batch 15, Strategy 'Synth Only': Selection Acc: 56.00%
+    Run 4, Batch 16, Strategy 'Synth Only': Selection Acc: 58.00%
+    Run 4, Batch 17, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 4, Batch 18, Strategy 'Synth Only': Selection Acc: 54.00%
+    Run 4, Batch 19, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 4, Batch 20, Strategy 'Synth Only': Selection Acc: 56.00%
+    Run 4, Batch 21, Strategy 'Synth Only': Selection Acc: 60.00%
+    Run 4, Batch 22, Strategy 'Synth Only': Selection Acc: 42.00%
+    Run 4, Batch 23, Strategy 'Synth Only': Selection Acc: 56.00%
+    Run 4, Batch 24, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 4, Batch 25, Strategy 'Synth Only': Selection Acc: 54.00%
+    Run 4, Batch 26, Strategy 'Synth Only': Selection Acc: 52.00%
+    Run 4, Batch 27, Strategy 'Synth Only': Selection Acc: 46.00%
+    Run 4, Batch 28, Strategy 'Synth Only': Selection Acc: 42.00%
+    Run 4, Batch 29, Strategy 'Synth Only': Selection Acc: 42.00%
+    Run 4, Batch 30, Strategy 'Synth Only': Selection Acc: 36.00%
+
+
+=== cGAN RUN 5/5 for S7 ===
+
+--- Training MI_cGAN for S7, Run 5 ---
+Generator input spec: [InputSpec(shape=(None, 100), ndim=2), InputSpec(shape=(None, 1), ndim=2)], output shape: (None, 12, 500)
+Critic input spec: [InputSpec(shape=(None, 12, 500), ndim=3), InputSpec(shape=(None, 1), ndim=2)], output shape: (None, 1)
+Epoch 0/1000 (MI_cGAN, S7, Run 5): D Loss = 90.7620, G Loss (Comb) = 4.7426
+Epoch 100/1000 (MI_cGAN, S7, Run 5): D Loss = -8.8315, G Loss (Comb) = -44.8180
+Epoch 200/1000 (MI_cGAN, S7, Run 5): D Loss = -3.8358, G Loss (Comb) = -12.8939
+Epoch 300/1000 (MI_cGAN, S7, Run 5): D Loss = -4.8046, G Loss (Comb) = -3.3856
+Epoch 400/1000 (MI_cGAN, S7, Run 5): D Loss = -5.4480, G Loss (Comb) = 0.7756
+Epoch 500/1000 (MI_cGAN, S7, Run 5): D Loss = -6.4188, G Loss (Comb) = 1.0581
+Epoch 600/1000 (MI_cGAN, S7, Run 5): D Loss = -7.1393, G Loss (Comb) = 5.0282
+Epoch 700/1000 (MI_cGAN, S7, Run 5): D Loss = -7.7565, G Loss (Comb) = 7.8265
+Epoch 800/1000 (MI_cGAN, S7, Run 5): D Loss = -7.6036, G Loss (Comb) = 8.7413
+Epoch 900/1000 (MI_cGAN, S7, Run 5): D Loss = -8.0880, G Loss (Comb) = 10.1691
+Epoch 999/1000 (MI_cGAN, S7, Run 5): D Loss = -8.2228, G Loss (Comb) = 9.1040
+
+--- BATCH GENERATION & 'SYNTH-ONLY' EVALUATION (S7, Run 5) ---
+  Generating 30 synth batches for 'synth-only' evaluation.
+  Selection is based on model performance on the combined train+validation dataset.
+    Run 5, Batch 1, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 5, Batch 2, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 5, Batch 3, Strategy 'Synth Only': Selection Acc: 56.00%
+    Run 5, Batch 4, Strategy 'Synth Only': Selection Acc: 40.00%
+    Run 5, Batch 5, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 5, Batch 6, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 5, Batch 7, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 5, Batch 8, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 5, Batch 9, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 5, Batch 10, Strategy 'Synth Only': Selection Acc: 42.00%
+    Run 5, Batch 11, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 5, Batch 12, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 5, Batch 13, Strategy 'Synth Only': Selection Acc: 54.00%
+    Run 5, Batch 14, Strategy 'Synth Only': Selection Acc: 56.00%
+    Run 5, Batch 15, Strategy 'Synth Only': Selection Acc: 66.00%
+    Run 5, Batch 16, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 5, Batch 17, Strategy 'Synth Only': Selection Acc: 44.00%
+    Run 5, Batch 18, Strategy 'Synth Only': Selection Acc: 56.00%
+    Run 5, Batch 19, Strategy 'Synth Only': Selection Acc: 52.00%
+    Run 5, Batch 20, Strategy 'Synth Only': Selection Acc: 58.00%
+    Run 5, Batch 21, Strategy 'Synth Only': Selection Acc: 34.00%
+    Run 5, Batch 22, Strategy 'Synth Only': Selection Acc: 46.00%
+    Run 5, Batch 23, Strategy 'Synth Only': Selection Acc: 52.00%
+    Run 5, Batch 24, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 5, Batch 25, Strategy 'Synth Only': Selection Acc: 56.00%
+    Run 5, Batch 26, Strategy 'Synth Only': Selection Acc: 44.00%
+    Run 5, Batch 27, Strategy 'Synth Only': Selection Acc: 48.00%
+    Run 5, Batch 28, Strategy 'Synth Only': Selection Acc: 46.00%
+    Run 5, Batch 29, Strategy 'Synth Only': Selection Acc: 50.00%
+    Run 5, Batch 30, Strategy 'Synth Only': Selection Acc: 64.00%
+
+
+--- SELECTING BEST STRATEGY ---
+Selected top 10 synthetic batches based on 'synth-only' performance on the validation set.
+  Top 1: Run 5, Batch 15, Accuracy: 66.00%
+  Top 2: Run 5, Batch 30, Accuracy: 64.00%
+  Top 3: Run 2, Batch 14, Accuracy: 62.00%
+  Top 4: Run 2, Batch 17, Accuracy: 62.00%
+  Top 5: Run 2, Batch 29, Accuracy: 62.00%
+  Top 6: Run 1, Batch 29, Accuracy: 60.00%
+  Top 7: Run 3, Batch 11, Accuracy: 60.00%
+  Top 8: Run 4, Batch 8, Accuracy: 60.00%
+  Top 9: Run 4, Batch 21, Accuracy: 60.00%
+  Top 10: Run 1, Batch 15, Accuracy: 58.00%
+
+--- Evaluating augmentation ratios for top 10 batches ---
+    Run 5, Batch 15, Ratio 25%: Selection Acc: 86.00%
+    Run 5, Batch 15, Ratio 50%: Selection Acc: 86.00%
+    Run 5, Batch 15, Ratio 100%: Selection Acc: 84.00%
+    Run 5, Batch 30, Ratio 25%: Selection Acc: 88.00%
+    Run 5, Batch 30, Ratio 50%: Selection Acc: 82.00%
+    Run 5, Batch 30, Ratio 100%: Selection Acc: 84.00%
+    Run 2, Batch 14, Ratio 25%: Selection Acc: 92.00%
+    Run 2, Batch 14, Ratio 50%: Selection Acc: 90.00%
+    Run 2, Batch 14, Ratio 100%: Selection Acc: 88.00%
+    Run 2, Batch 17, Ratio 25%: Selection Acc: 92.00%
+    Run 2, Batch 17, Ratio 50%: Selection Acc: 90.00%
+    Run 2, Batch 17, Ratio 100%: Selection Acc: 84.00%
+    Run 2, Batch 29, Ratio 25%: Selection Acc: 92.00%
+    Run 2, Batch 29, Ratio 50%: Selection Acc: 88.00%
+    Run 2, Batch 29, Ratio 100%: Selection Acc: 92.00%
+    Run 1, Batch 29, Ratio 25%: Selection Acc: 88.00%
+    Run 1, Batch 29, Ratio 50%: Selection Acc: 88.00%
+    Run 1, Batch 29, Ratio 100%: Selection Acc: 86.00%
+    Run 3, Batch 11, Ratio 25%: Selection Acc: 96.00%
+    Run 3, Batch 11, Ratio 50%: Selection Acc: 90.00%
+    Run 3, Batch 11, Ratio 100%: Selection Acc: 90.00%
+    Run 4, Batch 8, Ratio 25%: Selection Acc: 84.00%
+    Run 4, Batch 8, Ratio 50%: Selection Acc: 84.00%
+    Run 4, Batch 8, Ratio 100%: Selection Acc: 82.00%
+    Run 4, Batch 21, Ratio 25%: Selection Acc: 88.00%
+    Run 4, Batch 21, Ratio 50%: Selection Acc: 86.00%
+    Run 4, Batch 21, Ratio 100%: Selection Acc: 84.00%
+    Run 1, Batch 15, Ratio 25%: Selection Acc: 88.00%
+    Run 1, Batch 15, Ratio 50%: Selection Acc: 88.00%
+    Run 1, Batch 15, Ratio 100%: Selection Acc: 86.00%
+
+Selected best strategy: Run 3, Batch 11, Mix Ratio: 0.25 with a selection accuracy of 96.00%
+This strategy will now be evaluated on the unseen test set.
+
+--- FINAL TEST SET PERFORMANCE OF BEST STRATEGY ---
+  Test Accuracy: 73.88%
+
+
+=== FINAL SUMMARY FOR S7 ===
+REAL train → REAL test accuracy (Baseline): 73.88%
+BEST SYNTHETIC train → REAL test accuracy: 61.94%
+Saved best cGAN synthetic batch data to: Subject_7_D1T_25trials/best_synthetic_batch_S7.npz
+
+--- PLOTTING FINAL ACCURACY COMPARISON ---
+
+Saved accuracy comparison plot to: Subject_7_D1T_25trials/accuracy_comparison_S7.png
+
+Plotting data shapes S7: Real train (GAN fmt): (40, 12, 500), Synth combined (GAN fmt): (40, 12, 500), Augmented 100% (GAN fmt): (90, 12, 500)
+Generating plots for original channel numbers [8, 12] (selected channel indices: [4, 8])
+
+--- Plotting GA Comparison for Sel.ChIdx 4 (OrigCh 8) (S7) ---
+  GA Stats (Real vs Synth) Cls 1: Corr: 0.6422, RMSE: 0.0311
+  Freq W-dist (Real vs Synth): 0.0749
+  GA Stats (Real vs Aug) Cls 1: Corr: 0.8665, RMSE: 0.0196
+  Freq W-dist (Real vs Aug): 0.0914
+  GA Stats (Real vs Synth) Cls 2: Corr: 0.4155, RMSE: 0.0399
+  Freq W-dist (Real vs Synth): 0.0669
+  GA Stats (Real vs Aug) Cls 2: Corr: 0.8172, RMSE: 0.0221
+  Freq W-dist (Real vs Aug): 0.0821
+
+--- PSD ANALYSIS for Sel.ChIdx 4 (OrigCh 8) (S7) ---
+
+--- Plotting GA Comparison for Sel.ChIdx 8 (OrigCh 12) (S7) ---
+  GA Stats (Real vs Synth) Cls 1: Corr: 0.5723, RMSE: 0.0404
+  Freq W-dist (Real vs Synth): 0.0828
+  GA Stats (Real vs Aug) Cls 1: Corr: 0.8400, RMSE: 0.0247
+  Freq W-dist (Real vs Aug): 0.0883
+  GA Stats (Real vs Synth) Cls 2: Corr: 0.3386, RMSE: 0.0477
+  Freq W-dist (Real vs Synth): 0.0886
+  GA Stats (Real vs Aug) Cls 2: Corr: 0.7776, RMSE: 0.0282
+  Freq W-dist (Real vs Aug): 0.1246
+
+--- PSD ANALYSIS for Sel.ChIdx 8 (OrigCh 12) (S7) ---
+--- Subject 7 processing finished successfully. ---

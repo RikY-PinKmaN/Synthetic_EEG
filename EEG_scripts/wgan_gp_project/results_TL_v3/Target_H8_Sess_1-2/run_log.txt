@@ -1,0 +1,21 @@
+Log for Target H8, Sessions 1-2
+========================================
+
+
+--- Processing Target: H8, Sessions: 1-2 ---
+
+--- Step 3: Loading and splitting target data ---
+Filtering and resampling complete. New Fs: 80.0 Hz
+Found 266 clean Target and 531 clean Non-Target trials.
+Target data split complete. Training set size: 240, Test set size: 557
+
+--- Step 4: Normalizing Data ---
+
+--- Step 5: Creating Averaged Features ---
+
+--- Step 6: Training and Evaluating Models ---
+  Baseline Accuracy (Target Data Only): 72.22%
+  Transfer Learning Accuracy (Source + Target Data): 69.44%
+
+--- Step 7: Generating Final Plots ---
+--- Finished Target: H8, Sessions: 1-2 ---

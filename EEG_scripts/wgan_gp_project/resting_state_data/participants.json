@@ -1,0 +1,134 @@
+{
+  "participant_id": {
+    "Description": "Unique participant label"
+  },
+  "Gender": {
+    "Description": "Participant gender",
+    "Levels": {
+      "F": "Biological female",
+      "M": "Biological male"
+    }
+  },
+  "Age": {
+    "Description": "Participant age (years)",
+    "Units": "years"
+  },
+  "SessionOrder": {
+    "Description": "Participant session order label",
+    "Levels": {
+      "NS->SD": "First normal sleep session, then sleep deprivation session",
+      "SD->NS": "First sleep deprivation session, then normal sleep session"
+    }
+  },
+  "EEG_SamplingTime_Open_NS": {
+    "Description": "Eyes-open EEG sampling time (time of day) in NS"
+  }, 
+  "EEG_SamplingTime_Closed_NS": {
+    "Description": "Eyes-closed EEG sampling time (time of day) in NS"
+  },
+  "EEG_SamplingTime_Open_SD": {
+    "Description": "Eyes-open EEG sampling time (time of day) in SD"
+  },
+  "EEG_SamplingTime_Closed_SD": {
+    "Description": "Eyes-closed EEG sampling time (time of day) in NS"
+  },
+  "PVT_SamplingTime_NS": {
+    "Description": "PVT sampling time (time of day) in NS"
+  },
+  "PVT_SamplingTime_SD": {
+    "Description": "PVT sampling time (time of day) in SD"
+  },
+  "PVT_item1_NS": {
+    "Description": "Overall score of itme 1(Number of lapses) of PVT after normal sleep"
+  },
+  "PVT_item2_NS": {
+    "Description": "Overall score of itme 2(Median reaction time) of PVT after normal sleep"
+  },
+  "PVT_item3_NS": {
+    "Description": "Overall score of itme 3(Standard deviation of RT) of PVT after normal sleep"
+  },
+  "PVT_item1_SD": {
+    "Description": "Overall score of itme 1(Number of lapses) of PVT after sleep deprivation"
+  },
+  "PVT_item2_SD": {
+    "Description": "Overall score of itme 2(Median reaction time) of PVT after sleep deprivation"
+  },
+  "PVT_item3_SD": {
+    "Description": "Overall score of itme 3(Standard deviation of RT) of PVT after sleep deprivation"
+  },
+  "PANAS_P_NS": {
+    "Description": "Overall score of the Positive Affect(PA) measured by PANAS after normal sleep"
+  },
+  "PANAS_P_SD": {
+    "Description": "Overall score of the Positive Affect(PA) measured by PANAS after sleep deprivation"
+  },
+  "PANAS_N_NS": {
+    "Description": "Overall score of the Negative Affect(NA) measured by PANAS after normal sleep"
+  },
+  "PANAS_N_SD": {
+    "Description": "Overall score of the Negative Affect(NA) measured by PANAS after sleep deprivation"
+  },
+  "ATQ_NS": {
+    "Description": "Overall score of the ATQ after participants' normal sleep"
+  },
+  "ATQ_SD": {
+    "Description": "Overall score of the ATQ after participants' sleep deprivation"
+  },
+  "SAI_NS": {
+    "Description": "Overall score of the SAI after participants' normal sleep"
+  },
+  "SAI_SD": {
+    "Description": "Overall score of the SAI after participants' normal sleep"
+  },
+  "SSS_NS": {
+    "Description": "Overall score of the SSS after participants' normal sleep"
+  },
+  "SSS_SD": {
+    "Description": "Overall score of the SSS after participants' sleep deprivation"
+  },
+  "KSS_NS": {
+    "Description": "Overall score of the KSS after participants' normal sleep"
+  },
+  "KSS_SD": {
+    "Description": "Overall score of the KSS after participants' sleep deprivation"
+  },
+  "SleepDiary_item1_NS": {
+    "Description": "Overall score of itme1(Time I went to bed last night) of Sleeping?Diary after?normal sleep"
+  },
+  "SleepDiary_item2_NS": {
+    "Description": "Overall score of itme?2(Time I got out of bed this morning) of Sleeping Diary after normal sleep"
+  },
+  "SleepDiary_item3_NS": {
+    "Description": "Overall score of itme?3(Quality of sleep) of Sleeping Diary after normal sleep"
+  },
+  "EQ": {
+    "Description": "Overall score of the EQ of participants'"
+  },
+  "Buss_Perry": {
+    "Description": "Overall score of the BUSS-PERRY of participants' "
+  },
+  "PSQI_GlobalScore": {
+    "Description": "Overall score of the PSQI of participants' "
+  },
+  "PSQI_item1": {
+    "Description": "Overall score of itme 1(Subjective sleep quality) of PSQI"
+  },
+  "PSQI_item2": {
+    "Description": "Overall score of itme 2(Sleep latency) of PSQI"
+  },
+  "PSQI_item3": {
+    "Description": "Overall score of itme 3(Sleep duration) of PSQI"
+  },
+  "PSQI_item4": {
+    "Description": "Overall score of itme 4(Sleep efficiency) of PSQI"
+  },
+  "PSQI_item5": {
+    "Description": "Overall score of itme 5(Sleep disturbance) of PSQI"
+  },
+  "PSQI_item6": {
+    "Description": "Overall score of itme 6(Use of sleep medication) of PSQI"
+  },
+  "PSQI_item7": {
+    "Description": "Overall score of itme 7(Daytime dysfunction) of PSQI"
+  }
+}

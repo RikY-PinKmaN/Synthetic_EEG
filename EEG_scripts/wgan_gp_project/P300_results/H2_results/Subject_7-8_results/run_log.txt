@@ -1,0 +1,378 @@
+Log for Subject Pair 7-8 from H2
+========================================
+
+
+========================= PROCESSING SUBJECT PAIR: 7-8 from H2 =========================
+Using 1:4 Target:Non-Target ratio for this subject group.
+
+--- Step 1: Loading and Preprocessing Data ---
+Filtering and resampling complete. New Fs: 80.0 Hz
+
+--- Step 2: Epoching and Artifact Rejection ---
+Found 226 clean Target and 892 clean Non-Target trials.
+
+--- Step 3: Performing Fixed Sequential Data Split ---
+Split complete. Train: 300, Valid: 75, Test: 743
+
+--- Step 4: Creating Averaged Features for LDA Classifier ---
+Created averaged features. Train: 20, Valid: 5, Test: 49
+
+--- Step 5: Baseline Evaluation & Creating Unified Selection Set ---
+Created combined train+valid feature set with 25 averaged trials.
+Baseline Accuracy (Train+Valid -> Test): 71.43%
+
+--- Training cWGAN-GP for Subject 7-8, Run 1 ---
+Epoch 0/1000: D Loss=84.8677, G Loss (Comb)=1.5867
+Epoch 50/1000: D Loss=-0.4104, G Loss (Comb)=-2.9087
+Epoch 100/1000: D Loss=-0.3987, G Loss (Comb)=-2.1139
+Epoch 150/1000: D Loss=-0.4421, G Loss (Comb)=-1.1573
+Epoch 200/1000: D Loss=-0.1920, G Loss (Comb)=-0.7774
+Epoch 250/1000: D Loss=-0.4819, G Loss (Comb)=-0.5443
+Epoch 300/1000: D Loss=-0.4701, G Loss (Comb)=-0.7514
+Epoch 350/1000: D Loss=-0.4396, G Loss (Comb)=-1.0578
+Epoch 400/1000: D Loss=-0.4435, G Loss (Comb)=-1.4217
+Epoch 450/1000: D Loss=-0.4075, G Loss (Comb)=-1.9327
+Epoch 500/1000: D Loss=-0.2970, G Loss (Comb)=-2.4874
+Epoch 550/1000: D Loss=-0.4396, G Loss (Comb)=-2.7631
+Epoch 600/1000: D Loss=-0.3557, G Loss (Comb)=-2.9057
+Epoch 650/1000: D Loss=-0.5180, G Loss (Comb)=-2.9531
+Epoch 700/1000: D Loss=-0.5098, G Loss (Comb)=-3.1570
+Epoch 750/1000: D Loss=-0.4159, G Loss (Comb)=-3.4322
+Epoch 800/1000: D Loss=-0.5106, G Loss (Comb)=-3.2804
+Epoch 850/1000: D Loss=-0.5354, G Loss (Comb)=-3.4204
+Epoch 900/1000: D Loss=-0.5284, G Loss (Comb)=-3.4643
+Epoch 950/1000: D Loss=-0.5640, G Loss (Comb)=-3.4135
+Epoch 999/1000: D Loss=-0.6270, G Loss (Comb)=-3.4775
+
+--- Generating & Evaluating Batches with ERP Similarity (Run 1) ---
+    Run 1, Batch 1: ERP Similarity Score: -0.0304
+    Run 1, Batch 2: ERP Similarity Score: -0.0283
+    Run 1, Batch 3: ERP Similarity Score: -0.0289
+    Run 1, Batch 4: ERP Similarity Score: -0.0299
+    Run 1, Batch 5: ERP Similarity Score: -0.0314
+    Run 1, Batch 6: ERP Similarity Score: -0.0338
+    Run 1, Batch 7: ERP Similarity Score: -0.0341
+    Run 1, Batch 8: ERP Similarity Score: -0.0319
+    Run 1, Batch 9: ERP Similarity Score: -0.0287
+    Run 1, Batch 10: ERP Similarity Score: -0.0326
+    Run 1, Batch 11: ERP Similarity Score: -0.0291
+    Run 1, Batch 12: ERP Similarity Score: -0.0287
+    Run 1, Batch 13: ERP Similarity Score: -0.0291
+    Run 1, Batch 14: ERP Similarity Score: -0.0377
+    Run 1, Batch 15: ERP Similarity Score: -0.0305
+    Run 1, Batch 16: ERP Similarity Score: -0.0416
+    Run 1, Batch 17: ERP Similarity Score: -0.0323
+    Run 1, Batch 18: ERP Similarity Score: -0.0287
+    Run 1, Batch 19: ERP Similarity Score: -0.0322
+    Run 1, Batch 20: ERP Similarity Score: -0.0354
+    Run 1, Batch 21: ERP Similarity Score: -0.0318
+    Run 1, Batch 22: ERP Similarity Score: -0.0298
+    Run 1, Batch 23: ERP Similarity Score: -0.0328
+    Run 1, Batch 24: ERP Similarity Score: -0.0359
+    Run 1, Batch 25: ERP Similarity Score: -0.0342
+    Run 1, Batch 26: ERP Similarity Score: -0.0303
+    Run 1, Batch 27: ERP Similarity Score: -0.0285
+    Run 1, Batch 28: ERP Similarity Score: -0.0326
+    Run 1, Batch 29: ERP Similarity Score: -0.0300
+    Run 1, Batch 30: ERP Similarity Score: -0.0301
+
+--- Training cWGAN-GP for Subject 7-8, Run 2 ---
+Epoch 0/1000: D Loss=96.3684, G Loss (Comb)=0.0209
+Epoch 50/1000: D Loss=-0.4585, G Loss (Comb)=-4.6874
+Epoch 100/1000: D Loss=-0.4259, G Loss (Comb)=-3.9023
+Epoch 150/1000: D Loss=-0.2793, G Loss (Comb)=-2.8084
+Epoch 200/1000: D Loss=-0.3451, G Loss (Comb)=-1.6037
+Epoch 250/1000: D Loss=-0.3557, G Loss (Comb)=-1.4703
+Epoch 300/1000: D Loss=-0.3690, G Loss (Comb)=-1.4275
+Epoch 350/1000: D Loss=-0.4282, G Loss (Comb)=-1.4618
+Epoch 400/1000: D Loss=-0.4043, G Loss (Comb)=-1.7558
+Epoch 450/1000: D Loss=-0.3990, G Loss (Comb)=-1.9436
+Epoch 500/1000: D Loss=-0.4007, G Loss (Comb)=-2.1124
+Epoch 550/1000: D Loss=-0.4708, G Loss (Comb)=-2.1808
+Epoch 600/1000: D Loss=-0.4744, G Loss (Comb)=-2.3772
+Epoch 650/1000: D Loss=-0.4505, G Loss (Comb)=-2.6812
+Epoch 700/1000: D Loss=-0.5519, G Loss (Comb)=-2.4115
+Epoch 750/1000: D Loss=-0.4769, G Loss (Comb)=-2.4007
+Epoch 800/1000: D Loss=-0.5023, G Loss (Comb)=-2.4992
+Epoch 850/1000: D Loss=-0.5603, G Loss (Comb)=-2.4435
+Epoch 900/1000: D Loss=-0.6273, G Loss (Comb)=-2.5317
+Epoch 950/1000: D Loss=-0.6817, G Loss (Comb)=-2.4681
+Epoch 999/1000: D Loss=-0.6633, G Loss (Comb)=-2.4760
+
+--- Generating & Evaluating Batches with ERP Similarity (Run 2) ---
+    Run 2, Batch 1: ERP Similarity Score: -0.0305
+    Run 2, Batch 2: ERP Similarity Score: -0.0349
+    Run 2, Batch 3: ERP Similarity Score: -0.0324
+    Run 2, Batch 4: ERP Similarity Score: -0.0349
+    Run 2, Batch 5: ERP Similarity Score: -0.0317
+    Run 2, Batch 6: ERP Similarity Score: -0.0291
+    Run 2, Batch 7: ERP Similarity Score: -0.0323
+    Run 2, Batch 8: ERP Similarity Score: -0.0308
+    Run 2, Batch 9: ERP Similarity Score: -0.0337
+    Run 2, Batch 10: ERP Similarity Score: -0.0284
+    Run 2, Batch 11: ERP Similarity Score: -0.0302
+    Run 2, Batch 12: ERP Similarity Score: -0.0333
+    Run 2, Batch 13: ERP Similarity Score: -0.0290
+    Run 2, Batch 14: ERP Similarity Score: -0.0310
+    Run 2, Batch 15: ERP Similarity Score: -0.0359
+    Run 2, Batch 16: ERP Similarity Score: -0.0307
+    Run 2, Batch 17: ERP Similarity Score: -0.0306
+    Run 2, Batch 18: ERP Similarity Score: -0.0308
+    Run 2, Batch 19: ERP Similarity Score: -0.0290
+    Run 2, Batch 20: ERP Similarity Score: -0.0284
+    Run 2, Batch 21: ERP Similarity Score: -0.0317
+    Run 2, Batch 22: ERP Similarity Score: -0.0314
+    Run 2, Batch 23: ERP Similarity Score: -0.0321
+    Run 2, Batch 24: ERP Similarity Score: -0.0330
+    Run 2, Batch 25: ERP Similarity Score: -0.0303
+    Run 2, Batch 26: ERP Similarity Score: -0.0309
+    Run 2, Batch 27: ERP Similarity Score: -0.0320
+    Run 2, Batch 28: ERP Similarity Score: -0.0286
+    Run 2, Batch 29: ERP Similarity Score: -0.0310
+    Run 2, Batch 30: ERP Similarity Score: -0.0299
+
+--- Training cWGAN-GP for Subject 7-8, Run 3 ---
+Epoch 0/1000: D Loss=97.3235, G Loss (Comb)=0.5122
+Epoch 50/1000: D Loss=-0.5410, G Loss (Comb)=-3.4274
+Epoch 100/1000: D Loss=-0.4011, G Loss (Comb)=-2.1679
+Epoch 150/1000: D Loss=-0.3354, G Loss (Comb)=-1.8799
+Epoch 200/1000: D Loss=-0.3250, G Loss (Comb)=-0.7297
+Epoch 250/1000: D Loss=-0.4114, G Loss (Comb)=0.0844
+Epoch 300/1000: D Loss=-0.3199, G Loss (Comb)=-0.1738
+Epoch 350/1000: D Loss=-0.2852, G Loss (Comb)=-0.3664
+Epoch 400/1000: D Loss=-0.3480, G Loss (Comb)=-0.6702
+Epoch 450/1000: D Loss=-0.3516, G Loss (Comb)=-1.3896
+Epoch 500/1000: D Loss=-0.2885, G Loss (Comb)=-1.6243
+Epoch 550/1000: D Loss=-0.3857, G Loss (Comb)=-2.0690
+Epoch 600/1000: D Loss=-0.4575, G Loss (Comb)=-2.3125
+Epoch 650/1000: D Loss=-0.4231, G Loss (Comb)=-2.5155
+Epoch 700/1000: D Loss=-0.4953, G Loss (Comb)=-2.5693
+Epoch 750/1000: D Loss=-0.4703, G Loss (Comb)=-2.8108
+Epoch 800/1000: D Loss=-0.5309, G Loss (Comb)=-2.8671
+Epoch 850/1000: D Loss=-0.4588, G Loss (Comb)=-2.6963
+Epoch 900/1000: D Loss=-0.5519, G Loss (Comb)=-3.0305
+Epoch 950/1000: D Loss=-0.5475, G Loss (Comb)=-2.8287
+Epoch 999/1000: D Loss=-0.5844, G Loss (Comb)=-2.8956
+
+--- Generating & Evaluating Batches with ERP Similarity (Run 3) ---
+    Run 3, Batch 1: ERP Similarity Score: -0.0243
+    Run 3, Batch 2: ERP Similarity Score: -0.0299
+    Run 3, Batch 3: ERP Similarity Score: -0.0250
+    Run 3, Batch 4: ERP Similarity Score: -0.0301
+    Run 3, Batch 5: ERP Similarity Score: -0.0273
+    Run 3, Batch 6: ERP Similarity Score: -0.0281
+    Run 3, Batch 7: ERP Similarity Score: -0.0276
+    Run 3, Batch 8: ERP Similarity Score: -0.0374
+    Run 3, Batch 9: ERP Similarity Score: -0.0270
+    Run 3, Batch 10: ERP Similarity Score: -0.0295
+    Run 3, Batch 11: ERP Similarity Score: -0.0274
+    Run 3, Batch 12: ERP Similarity Score: -0.0271
+    Run 3, Batch 13: ERP Similarity Score: -0.0317
+    Run 3, Batch 14: ERP Similarity Score: -0.0281
+    Run 3, Batch 15: ERP Similarity Score: -0.0292
+    Run 3, Batch 16: ERP Similarity Score: -0.0244
+    Run 3, Batch 17: ERP Similarity Score: -0.0292
+    Run 3, Batch 18: ERP Similarity Score: -0.0330
+    Run 3, Batch 19: ERP Similarity Score: -0.0297
+    Run 3, Batch 20: ERP Similarity Score: -0.0251
+    Run 3, Batch 21: ERP Similarity Score: -0.0272
+    Run 3, Batch 22: ERP Similarity Score: -0.0274
+    Run 3, Batch 23: ERP Similarity Score: -0.0290
+    Run 3, Batch 24: ERP Similarity Score: -0.0324
+    Run 3, Batch 25: ERP Similarity Score: -0.0257
+    Run 3, Batch 26: ERP Similarity Score: -0.0261
+    Run 3, Batch 27: ERP Similarity Score: -0.0272
+    Run 3, Batch 28: ERP Similarity Score: -0.0273
+    Run 3, Batch 29: ERP Similarity Score: -0.0284
+    Run 3, Batch 30: ERP Similarity Score: -0.0275
+
+--- Training cWGAN-GP for Subject 7-8, Run 4 ---
+Epoch 0/1000: D Loss=109.6710, G Loss (Comb)=1.8678
+Epoch 50/1000: D Loss=-0.4659, G Loss (Comb)=-3.1353
+Epoch 100/1000: D Loss=-0.1654, G Loss (Comb)=-2.7639
+Epoch 150/1000: D Loss=-0.2920, G Loss (Comb)=-1.6403
+Epoch 200/1000: D Loss=-0.3917, G Loss (Comb)=-0.7244
+Epoch 250/1000: D Loss=-0.2525, G Loss (Comb)=-0.6638
+Epoch 300/1000: D Loss=-0.4557, G Loss (Comb)=-0.1505
+Epoch 350/1000: D Loss=-0.3700, G Loss (Comb)=-0.0570
+Epoch 400/1000: D Loss=-0.4474, G Loss (Comb)=-0.4672
+Epoch 450/1000: D Loss=-0.3426, G Loss (Comb)=-0.8709
+Epoch 500/1000: D Loss=-0.3654, G Loss (Comb)=-1.4535
+Epoch 550/1000: D Loss=-0.3938, G Loss (Comb)=-1.6572
+Epoch 600/1000: D Loss=-0.4918, G Loss (Comb)=-1.9822
+Epoch 650/1000: D Loss=-0.5081, G Loss (Comb)=-2.1700
+Epoch 700/1000: D Loss=-0.5007, G Loss (Comb)=-2.0480
+Epoch 750/1000: D Loss=-0.4942, G Loss (Comb)=-2.1346
+Epoch 800/1000: D Loss=-0.5329, G Loss (Comb)=-2.0873
+Epoch 850/1000: D Loss=-0.5404, G Loss (Comb)=-2.0576
+Epoch 900/1000: D Loss=-0.5549, G Loss (Comb)=-2.0425
+Epoch 950/1000: D Loss=-0.5425, G Loss (Comb)=-1.9668
+Epoch 999/1000: D Loss=-0.7231, G Loss (Comb)=-1.9423
+
+--- Generating & Evaluating Batches with ERP Similarity (Run 4) ---
+    Run 4, Batch 1: ERP Similarity Score: -0.0295
+    Run 4, Batch 2: ERP Similarity Score: -0.0299
+    Run 4, Batch 3: ERP Similarity Score: -0.0288
+    Run 4, Batch 4: ERP Similarity Score: -0.0309
+    Run 4, Batch 5: ERP Similarity Score: -0.0267
+    Run 4, Batch 6: ERP Similarity Score: -0.0286
+    Run 4, Batch 7: ERP Similarity Score: -0.0321
+    Run 4, Batch 8: ERP Similarity Score: -0.0223
+    Run 4, Batch 9: ERP Similarity Score: -0.0316
+    Run 4, Batch 10: ERP Similarity Score: -0.0245
+    Run 4, Batch 11: ERP Similarity Score: -0.0288
+    Run 4, Batch 12: ERP Similarity Score: -0.0274
+    Run 4, Batch 13: ERP Similarity Score: -0.0276
+    Run 4, Batch 14: ERP Similarity Score: -0.0246
+    Run 4, Batch 15: ERP Similarity Score: -0.0310
+    Run 4, Batch 16: ERP Similarity Score: -0.0261
+    Run 4, Batch 17: ERP Similarity Score: -0.0253
+    Run 4, Batch 18: ERP Similarity Score: -0.0249
+    Run 4, Batch 19: ERP Similarity Score: -0.0290
+    Run 4, Batch 20: ERP Similarity Score: -0.0250
+    Run 4, Batch 21: ERP Similarity Score: -0.0304
+    Run 4, Batch 22: ERP Similarity Score: -0.0250
+    Run 4, Batch 23: ERP Similarity Score: -0.0287
+    Run 4, Batch 24: ERP Similarity Score: -0.0267
+    Run 4, Batch 25: ERP Similarity Score: -0.0266
+    Run 4, Batch 26: ERP Similarity Score: -0.0270
+    Run 4, Batch 27: ERP Similarity Score: -0.0297
+    Run 4, Batch 28: ERP Similarity Score: -0.0242
+    Run 4, Batch 29: ERP Similarity Score: -0.0247
+    Run 4, Batch 30: ERP Similarity Score: -0.0252
+
+--- Training cWGAN-GP for Subject 7-8, Run 5 ---
+Epoch 0/1000: D Loss=93.1178, G Loss (Comb)=2.5291
+Epoch 50/1000: D Loss=-0.4274, G Loss (Comb)=-2.5635
+Epoch 100/1000: D Loss=-0.3099, G Loss (Comb)=-1.4949
+Epoch 150/1000: D Loss=-0.3151, G Loss (Comb)=-0.4079
+Epoch 200/1000: D Loss=-0.2769, G Loss (Comb)=0.1477
+Epoch 250/1000: D Loss=-0.4101, G Loss (Comb)=0.7578
+Epoch 300/1000: D Loss=-0.4213, G Loss (Comb)=0.6685
+Epoch 350/1000: D Loss=-0.3446, G Loss (Comb)=0.0819
+Epoch 400/1000: D Loss=-0.4111, G Loss (Comb)=0.1914
+Epoch 450/1000: D Loss=-0.3155, G Loss (Comb)=-0.7128
+Epoch 500/1000: D Loss=-0.3951, G Loss (Comb)=-0.7290
+Epoch 550/1000: D Loss=-0.3814, G Loss (Comb)=-1.0930
+Epoch 600/1000: D Loss=-0.4388, G Loss (Comb)=-1.4017
+Epoch 650/1000: D Loss=-0.5045, G Loss (Comb)=-1.5498
+Epoch 700/1000: D Loss=-0.4218, G Loss (Comb)=-1.7919
+Epoch 750/1000: D Loss=-0.4755, G Loss (Comb)=-1.9639
+Epoch 800/1000: D Loss=-0.4570, G Loss (Comb)=-1.6868
+Epoch 850/1000: D Loss=-0.5220, G Loss (Comb)=-1.7974
+Epoch 900/1000: D Loss=-0.4608, G Loss (Comb)=-1.7956
+Epoch 950/1000: D Loss=-0.5707, G Loss (Comb)=-1.7287
+Epoch 999/1000: D Loss=-0.6119, G Loss (Comb)=-1.7486
+
+--- Generating & Evaluating Batches with ERP Similarity (Run 5) ---
+    Run 5, Batch 1: ERP Similarity Score: -0.0354
+    Run 5, Batch 2: ERP Similarity Score: -0.0322
+    Run 5, Batch 3: ERP Similarity Score: -0.0354
+    Run 5, Batch 4: ERP Similarity Score: -0.0309
+    Run 5, Batch 5: ERP Similarity Score: -0.0330
+    Run 5, Batch 6: ERP Similarity Score: -0.0438
+    Run 5, Batch 7: ERP Similarity Score: -0.0328
+    Run 5, Batch 8: ERP Similarity Score: -0.0380
+    Run 5, Batch 9: ERP Similarity Score: -0.0340
+    Run 5, Batch 10: ERP Similarity Score: -0.0321
+    Run 5, Batch 11: ERP Similarity Score: -0.0393
+    Run 5, Batch 12: ERP Similarity Score: -0.0385
+    Run 5, Batch 13: ERP Similarity Score: -0.0395
+    Run 5, Batch 14: ERP Similarity Score: -0.0329
+    Run 5, Batch 15: ERP Similarity Score: -0.0315
+    Run 5, Batch 16: ERP Similarity Score: -0.0309
+    Run 5, Batch 17: ERP Similarity Score: -0.0300
+    Run 5, Batch 18: ERP Similarity Score: -0.0386
+    Run 5, Batch 19: ERP Similarity Score: -0.0259
+    Run 5, Batch 20: ERP Similarity Score: -0.0372
+    Run 5, Batch 21: ERP Similarity Score: -0.0319
+    Run 5, Batch 22: ERP Similarity Score: -0.0370
+    Run 5, Batch 23: ERP Similarity Score: -0.0286
+    Run 5, Batch 24: ERP Similarity Score: -0.0292
+    Run 5, Batch 25: ERP Similarity Score: -0.0357
+    Run 5, Batch 26: ERP Similarity Score: -0.0370
+    Run 5, Batch 27: ERP Similarity Score: -0.0323
+    Run 5, Batch 28: ERP Similarity Score: -0.0343
+    Run 5, Batch 29: ERP Similarity Score: -0.0301
+    Run 5, Batch 30: ERP Similarity Score: -0.0473
+
+
+--- Step 7: Selecting Best Augmentation Strategy ---
+Selected top 10 synthetic batches based on ERP similarity to the validation set.
+  Top 1: Run 4, Batch 8, Score: -0.0223
+  Top 2: Run 4, Batch 28, Score: -0.0242
+  Top 3: Run 3, Batch 1, Score: -0.0243
+  Top 4: Run 3, Batch 16, Score: -0.0244
+  Top 5: Run 4, Batch 10, Score: -0.0245
+  Top 6: Run 4, Batch 14, Score: -0.0246
+  Top 7: Run 4, Batch 29, Score: -0.0247
+  Top 8: Run 4, Batch 18, Score: -0.0249
+  Top 9: Run 4, Batch 20, Score: -0.0250
+  Top 10: Run 3, Batch 3, Score: -0.0250
+
+--- Evaluating strategies on the validation set using classification accuracy ---
+    Run 4, Batch 8, Strategy 'Synth Only': Validation Acc: 80.00%
+    Run 4, Batch 8, Strategy 'Augmented (25%)': Validation Acc: 60.00%
+    Run 4, Batch 8, Strategy 'Augmented (50%)': Validation Acc: 80.00%
+    Run 4, Batch 8, Strategy 'Augmented (100%)': Validation Acc: 80.00%
+    Run 4, Batch 28, Strategy 'Synth Only': Validation Acc: 60.00%
+    Run 4, Batch 28, Strategy 'Augmented (25%)': Validation Acc: 40.00%
+    Run 4, Batch 28, Strategy 'Augmented (50%)': Validation Acc: 80.00%
+    Run 4, Batch 28, Strategy 'Augmented (100%)': Validation Acc: 60.00%
+    Run 3, Batch 1, Strategy 'Synth Only': Validation Acc: 60.00%
+    Run 3, Batch 1, Strategy 'Augmented (25%)': Validation Acc: 60.00%
+    Run 3, Batch 1, Strategy 'Augmented (50%)': Validation Acc: 60.00%
+    Run 3, Batch 1, Strategy 'Augmented (100%)': Validation Acc: 80.00%
+    Run 3, Batch 16, Strategy 'Synth Only': Validation Acc: 20.00%
+    Run 3, Batch 16, Strategy 'Augmented (25%)': Validation Acc: 60.00%
+    Run 3, Batch 16, Strategy 'Augmented (50%)': Validation Acc: 100.00%
+    Run 3, Batch 16, Strategy 'Augmented (100%)': Validation Acc: 80.00%
+    Run 4, Batch 10, Strategy 'Synth Only': Validation Acc: 80.00%
+    Run 4, Batch 10, Strategy 'Augmented (25%)': Validation Acc: 80.00%
+    Run 4, Batch 10, Strategy 'Augmented (50%)': Validation Acc: 60.00%
+    Run 4, Batch 10, Strategy 'Augmented (100%)': Validation Acc: 60.00%
+    Run 4, Batch 14, Strategy 'Synth Only': Validation Acc: 40.00%
+    Run 4, Batch 14, Strategy 'Augmented (25%)': Validation Acc: 40.00%
+    Run 4, Batch 14, Strategy 'Augmented (50%)': Validation Acc: 100.00%
+    Run 4, Batch 14, Strategy 'Augmented (100%)': Validation Acc: 60.00%
+    Run 4, Batch 29, Strategy 'Synth Only': Validation Acc: 60.00%
+    Run 4, Batch 29, Strategy 'Augmented (25%)': Validation Acc: 100.00%
+    Run 4, Batch 29, Strategy 'Augmented (50%)': Validation Acc: 60.00%
+    Run 4, Batch 29, Strategy 'Augmented (100%)': Validation Acc: 80.00%
+    Run 4, Batch 18, Strategy 'Synth Only': Validation Acc: 20.00%
+    Run 4, Batch 18, Strategy 'Augmented (25%)': Validation Acc: 40.00%
+    Run 4, Batch 18, Strategy 'Augmented (50%)': Validation Acc: 60.00%
+    Run 4, Batch 18, Strategy 'Augmented (100%)': Validation Acc: 80.00%
+    Run 4, Batch 20, Strategy 'Synth Only': Validation Acc: 80.00%
+    Run 4, Batch 20, Strategy 'Augmented (25%)': Validation Acc: 40.00%
+    Run 4, Batch 20, Strategy 'Augmented (50%)': Validation Acc: 80.00%
+    Run 4, Batch 20, Strategy 'Augmented (100%)': Validation Acc: 80.00%
+    Run 3, Batch 3, Strategy 'Synth Only': Validation Acc: 80.00%
+    Run 3, Batch 3, Strategy 'Augmented (25%)': Validation Acc: 80.00%
+    Run 3, Batch 3, Strategy 'Augmented (50%)': Validation Acc: 60.00%
+    Run 3, Batch 3, Strategy 'Augmented (100%)': Validation Acc: 80.00%
+
+Found 3 strategies with the top validation accuracy of 100.00%.
+Using ERP similarity score as a tie-breaker...
+  - Strategy (Run 3, Batch 16, Ratio 0.5): Accuracy=100.00, ERP Score=-0.0244
+  - Strategy (Run 4, Batch 14, Ratio 0.5): Accuracy=100.00, ERP Score=-0.0246
+  - Strategy (Run 4, Batch 29, Ratio 0.25): Accuracy=100.00, ERP Score=-0.0247
+
+Selected best strategy: Run 3, Batch 16, Strategy: Augmented (50%) with a validation accuracy of 100.00%
+This strategy will now be evaluated on the unseen test set.
+
+
+--- Step 8: Final Evaluation of Best Strategies on Test Set ---
+BEST SYNTHETIC-ONLY (Val Acc: 80.00%) -> REAL test accuracy: 81.63%
+Retraining best model on combined Train+Validation data for final evaluation.
+BEST OVERALL STRATEGY (Augmented (50%), Val Acc: 100.00%) -> REAL test accuracy: 89.80%
+
+--- Step 9: Final Plotting and Summary ---
+
+Saved accuracy comparison plot to: H2_results/Subject_7-8_results/accuracy_comparison_S7-8.png
+
+--- Plotting Combined Grand Average ERP Comparison for Channel Cz (Session 7-8) ---
+Data will be rescaled to original amplitude (μV) for plotting.
+Saved combined grand average plot to: H2_results/Subject_7-8_results/GA_ERP_Combined_S7-8_ChCz.png
+
+--- Subject 7-8 processing finished successfully. ---

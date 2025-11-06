@@ -1,0 +1,22 @@
+{
+  "PowerLineFrequency": 50,
+  "SoftwareFilters": {
+    "FilterDescription": {
+      "Description": "n/a"
+    }
+  },
+  "EEGReference": "FCz",
+  "InstitutionAddress": "No.2 Tiansheng Road, BeibeiDistrict, Chongqing City, 400715, China",
+  "InstitutionalDepartmentName": "Faculty of Psychology",
+  "InstitutionName": "Southwest University",
+  "EEGPlacementScheme": "10-20",
+  "CapManufacturer": "Brain Products GmbH",
+  "TaskName": "eyesopen",
+  "EEGChannelCount": 61,
+  "RecordingType": "continuous",
+  "RecordingDuration": 290.84,
+  "SamplingFrequency": 500,
+  "EOGChannelCount": 0,
+  "ECGChannelCount": 0,
+  "EMGChannelCount": 0
+}

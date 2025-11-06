@@ -1,0 +1,21 @@
+Log for Target H9, Sessions 5-6
+========================================
+
+
+--- Processing Target: H9, Sessions: 5-6 ---
+
+--- Step 3: Loading and splitting target data ---
+Filtering and resampling complete. New Fs: 80.0 Hz
+Found 236 clean Target and 945 clean Non-Target trials.
+Target data split complete. Training set size: 240, Test set size: 941
+
+--- Step 4: Normalizing Data ---
+
+--- Step 5: Creating Averaged Features ---
+
+--- Step 6: Training and Evaluating Models ---
+  Baseline Accuracy (Target Data Only): 66.13%
+  Transfer Learning Accuracy (Source + Target Data): 74.19%
+
+--- Step 7: Generating Final Plots ---
+--- Finished Target: H9, Sessions: 5-6 ---

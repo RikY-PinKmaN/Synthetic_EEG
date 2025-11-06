@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "wgan_gp_project"
+version = "0.1.0"
+description = "WGAN-GP for synthetic EEG data generation."
+authors = ["Sourojit <goswamisourojit@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "src" }]
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+numpy = ">=1.23"
+scipy = "^1.10"
+scikit-learn = "^1.2"
+matplotlib = "^3.7"
+mne = "^1.4"
+pyriemann = "^0.7"
+
+# Pinning the version to be more specific, just in case
+
+h5py = "^3.14.0"
+seaborn = "^0.13.2"
+statsmodels = "^0.14.4"
+plotly = "^6.1.2"
+mlxtend = "^0.23.4"
+#spektral = "^1.3.1"
+tensorflow = {extras = ["and-cuda"], version = "^2.20.0"}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
