@@ -1,0 +1,38 @@
+# Python virtual environment and cache
+.venv/
+__pycache__/
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# MATLAB temporary files
+*.asv
+
+# Generated data, results, and plots
+*.mat
+*.csv
+*.npz
+*.png
+*.log
+*.gdf
+
+# Specific result directories
+MI-BCI Classification/wgan_gp_project/DATA*results/
+MI-BCI Classification/wgan_gp_project/H*_results/
+MI-BCI Classification/wgan_gp_project/P300_results/
+MI-BCI Classification/wgan_gp_project/Box_Plots/
+MI-BCI Classification/wgan_gp_project/Combined_Grand_Average_Plots/
+MI-BCI Classification/wgan_gp_project/Scatter_Plots/
+MI-BCI Classification/wgan_gp_project/ResUlTS/
+MI-BCI Classification/wgan_gp_project/results_TL_v3/
+MI-BCI Classification/wgan_gp_project/Subject_*_D1T_50trials/
+MI-BCI Classification/wgan_gp_project/matplotlib/
+MI-BCI Classification/eeg_gan/output/
+MI-BCI Classification/eeg_gan/trained_models/
+
+
+# PDFs - ignore all by default
+*.pdf
+# But re-include (un-ignore) the papers in the GAN directory
+!MI-BCI Classification/GAN/*.pdf
