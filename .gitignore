@@ -1,38 +1,49 @@
-# Python virtual environment and cache
+# ---------- Data & results (never track) ----------
+EEG_scripts/data/
+EEG_scripts/results/
+*.mat
+*.gdf
+*.easy
+*.fdt
+*.set
+*.npz
+*.h5
+
+# ---------- Python ----------
 .venv/
 __pycache__/
 *.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
 
-# Jupyter Notebook checkpoints
+# ---------- Jupyter ----------
 .ipynb_checkpoints/
 
-# MATLAB temporary files
+# ---------- MATLAB ----------
 *.asv
 
-# Generated data, results, and plots
-*.mat
-*.csv
-*.npz
-*.png
+# ---------- Logs / aggregates ----------
 *.log
-*.gdf
+*.csv
 
-# Specific result directories
-MI-BCI Classification/wgan_gp_project/DATA*results/
-MI-BCI Classification/wgan_gp_project/H*_results/
-MI-BCI Classification/wgan_gp_project/P300_results/
-MI-BCI Classification/wgan_gp_project/Box_Plots/
-MI-BCI Classification/wgan_gp_project/Combined_Grand_Average_Plots/
-MI-BCI Classification/wgan_gp_project/Scatter_Plots/
-MI-BCI Classification/wgan_gp_project/ResUlTS/
-MI-BCI Classification/wgan_gp_project/results_TL_v3/
-MI-BCI Classification/wgan_gp_project/Subject_*_D1T_50trials/
-MI-BCI Classification/wgan_gp_project/matplotlib/
-MI-BCI Classification/eeg_gan/output/
-MI-BCI Classification/eeg_gan/trained_models/
+# ---------- Editor / IDE ----------
+.vscode/
+.idea/
 
+# ---------- Claude Code config (local only) ----------
+.claude/
+EEG_scripts/CLAUDE.md
+CLAUDE.md
+EEG_scripts/README.md
 
-# PDFs - ignore all by default
-*.pdf
-# But re-include (un-ignore) the papers in the GAN directory
-!MI-BCI Classification/GAN/*.pdf
+# ---------- Local-only directories ----------
+archive/
+EEG_scripts/matlab_files/
+EEG_scripts/wgan_gp_project/
+EEG_scripts/pr/
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db

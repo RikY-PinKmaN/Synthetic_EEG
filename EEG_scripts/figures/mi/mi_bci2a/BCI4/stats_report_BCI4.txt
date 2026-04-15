@@ -1,0 +1,45 @@
+======================================================================
+Statistical Analysis — BCI4 (n=9)
+======================================================================
+
+Descriptive Statistics (%):
+  Baseline:      mean=7544.80  std=1411.28  median=7419.35  min=5322.58  max=9596.77
+  Synth-Only:    mean=7544.80  std=1399.46  median=6935.48  min=5725.81  max=9596.77
+  Best-Aug:      mean=7670.25  std=1397.56  median=7258.06  min=5403.23  max=9596.77
+
+Per-Subject Accuracies (%):
+  Subject      Baseline   Synth-Only   Best-Aug  Δ(Aug-BL) Strategy        Ratio   
+  ---------------------------------------------------------------------------
+  S1            7661.29      8306.45    8306.45    +645.16 SynthOnly       0.00    
+  S2            5322.58      5725.81    5403.23     +80.65 Aug10           0.10    
+  S3            9596.77      9596.77    9596.77      +0.00 Aug100          1.00    
+  S4            6693.55      6935.48    7258.06    +564.52 Aug75           0.75    
+  S5            6370.97      6451.61    6693.55    +322.58 Aug150          1.50    
+  S6            6451.61      6129.03    6129.03    -322.58 SynthOnly       0.00    
+  S7            7419.35      6532.26    7258.06    -161.29 Aug50           nan     
+  S8            9274.19      9032.26    9274.19      +0.00 Aug10           nan     
+  S9            9112.90      9193.55    9112.90      +0.00 Aug10           nan     
+
+Paired Statistical Tests:
+----------------------------------------------------------------------
+
+  Baseline vs Synth-Only:
+    Mean difference: +0.00%
+    Paired t-test:   t=-0.0000, p=1.000000  n.s.
+    Wilcoxon:        W=16.5, p=0.875000  n.s.
+    Cohen's d:       0.0000
+
+  Baseline vs Best-Aug:
+    Mean difference: +125.45%
+    Paired t-test:   t=-1.1657, p=0.277329  n.s.
+    Wilcoxon:        W=5.5, p=0.343750  n.s.
+    Cohen's d:       0.4121
+
+  Synth-Only vs Best-Aug:
+    Mean difference: +125.45%
+    Paired t-test:   t=-1.2572, p=0.244129  n.s.
+    Wilcoxon:        W=6.0, p=0.406250  n.s.
+    Cohen's d:       0.4445
+
+Significance: * p<0.05, ** p<0.01, *** p<0.001, n.s. = not significant
+======================================================================
